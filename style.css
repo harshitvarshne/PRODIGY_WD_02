@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2b3e5b;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.stopwatch {
+    transition: 0.8s;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 40px;
+}
+.stopwatch:hover{
+    border: 2px;
+    transform: scale(1.05);
+}
+#display {
+    font-size: 2em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blink {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 90px;
+}
+
+button#startStop {
+    background-color: #54a957;
+    color: white;
+}
+
+button#startStop:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button#lap {
+    background-color: #475ded;
+    color: white;
+}
+
+button#lap:hover {
+    background-color: #1976d2;
+    transform: scale(1.05);
+}
+
+button#reset {
+    background-color: #ed5247;
+    color: white;
+}
+
+button#reset:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+.laps {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.lap {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.laps::-webkit-scrollbar {
+    width: 8px;
+}
+
+.laps::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.laps::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.laps::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
